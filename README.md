@@ -77,7 +77,7 @@ For detailed behavior, please refer to [examples/tag.py](examples/tag.py).
 
 **Content Processing:**
 
-- Text content is decoded using html.unescape() to handle HTML entities
+- Text content is decoded using `html.unescape()` to handle HTML entities
 - Comments are stored in the values dictionary with the `comment` key
 - Comment tags are treated as empty tag names
 
