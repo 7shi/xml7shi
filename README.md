@@ -7,6 +7,10 @@ A pull-based simple and permissive XML parser for Python.
 - Focuses on practical parsing rather than strict XML specification compliance
 - No external dependencies
 
+Detailed description (in Japanese)
+
+- https://qiita.com/7shi/items/d8d3ab5371aa9dddcb3e
+
 ## Installation
 
 ```bash
