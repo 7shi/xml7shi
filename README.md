@@ -61,7 +61,7 @@ For detailed behavior, please refer to [examples/tag.py](examples/tag.py).
 **Parser Behavior:**
 
 - The parser is permissive and does not perform strict XML syntax checking
-- The parser attempts to parse incomplete XML as much as possible
+- The parser attempts to parse incomplete XML (including HTML) as much as possible
 
 **Tag Processing:**
 
