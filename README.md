@@ -126,7 +126,7 @@ Based on the test cases, the parser adheres to the following behaviors:
 - Attribute values are always returned as strings.
 - The parser is permissive, allowing spaces around the equals sign in attribute assignments (e.g., `a = 3`).
 - Attributes can be specified with or without quotes. For instance, `from=139` and `index="Dante Alighieri"` are both valid.
-- Attributes without values (e.g., `header=1`) are parsed with their values as strings.
+- Attributes without values (e.g., `<input checked>`) are parsed with empty string values.
 
 **Comment Processing:**
 - HTML-style comments (`<!--comment-->`) are parsed as a special case.
@@ -142,6 +142,7 @@ Based on the test cases, the parser adheres to the following behaviors:
 **General Behavior:**
 - The parser does not build a tag hierarchy (DOM tree). It processes the XML as a flat stream of events.
 
+For detailed parsing behavior examples and edge cases, see the [test cases](tests/test_tag.py).
 
 ## Testing
 

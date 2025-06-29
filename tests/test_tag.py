@@ -79,3 +79,12 @@ def test_attribute_case_insensitive():
         ";tag;{'attr': 'value'}",
         'test;/tag;{}'
     ])
+
+def test_attribute_without_value():
+    _run_test('<input checked id="foo">', [
+        ";input;{'checked': '', 'id': 'foo'}"
+    ])
+    _run_test('<option selected value="test">text</option>', [
+        ";option;{'selected': '', 'value': 'test'}",
+        'text;/option;{}'
+    ])
