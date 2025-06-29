@@ -59,3 +59,23 @@ def test_comment_with_tag():
         ';tag;{}',
         ';/tag;{}'
     ])
+
+def test_tag_case_insensitive():
+    _run_test('<TAG>test</TAG>', [
+        ';tag;{}',
+        'test;/tag;{}'
+    ])
+    _run_test('<Tag>test</Tag>', [
+        ';tag;{}',
+        'test;/tag;{}'
+    ])
+
+def test_attribute_case_insensitive():
+    _run_test('<tag A=1 B=2>test</tag>', [
+        ";tag;{'a': '1', 'b': '2'}",
+        'test;/tag;{}'
+    ])
+    _run_test('<tag AtTr="value">test</tag>', [
+        ";tag;{'attr': 'value'}",
+        'test;/tag;{}'
+    ])
